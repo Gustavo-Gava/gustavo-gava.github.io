@@ -1,16 +1,37 @@
-import { Flex, Icon, Box, Text } from "@chakra-ui/react"
+import { Flex, Icon, Box, Text, FlexProps } from "@chakra-ui/react"
+import { ReactElement } from "react"
 import { FaReact } from "react-icons/fa"
-import ReactLogo from '../../assets/svg/reactjs-icon.svg?component'
+import ReactLogo from "../../assets/svg/reactjs-icon.svg?component"
 
-export function TechCard() {
+interface TechCardProps extends FlexProps {
+	title: string
+	color: string
+	icon: React.FC<React.SVGProps<SVGSVGElement>>
+}
+
+export function TechCard({ title, color, icon, ...rest }: TechCardProps) {
+	console.log(color)
+
 	return (
-		<Flex w="80" flexDir="column" alignItems="flex-start"  p="6" borderRadius="8" borderWidth="1px" borderColor="red.800">
-			<Box borderRadius="full" p="4" backgroundColor="rgba(0, 174, 255, 0.2)">
-				<ReactLogo width={24} height={24}/>
+		<Flex
+			w={320}
+			p="6"
+			flexDir="column"
+			alignItems="flex-start"
+			bgColor="gray.800"
+			borderBottomWidth={8}
+			borderBottomColor={color}
+			borderBottomStyle="solid"
+			borderRadius="8"
+			boxShadow="0 1.6rem 2.4rem rgb(0 0 0 / 25%);"
+			{...rest}
+		>
+			<Box borderRadius="full" p="4" mb="4" backgroundColor={`${color}CC`}>
+				<ReactLogo width={34} height={34} />
 			</Box>
 
 			<Text as="h2" fontSize="1xl">
-				React
+				{title}
 			</Text>
 
 			<Text>I have been working with React for 2 years on a variety of different projects.</Text>

@@ -1,6 +1,8 @@
 import { Box, Flex, Grid, Text } from "@chakra-ui/react"
 import { TechCard } from "../../TechCard"
 
+import ReactIcon from "../../../assets/svg/reactjs-icon.svg?component"
+
 export function SecondSection() {
 	return (
 		<Box h="calc(100vh)">
@@ -12,19 +14,20 @@ export function SecondSection() {
 				<Grid
 					autoFlow="row"
 					templateColumns={["1fr", "1fr 1fr", "1fr 1fr 1fr"]}
-					gridGap="2"
+					gridColumnGap="40"
+					gridRowGap="12"
+					justifyContent="space-between"
 					justifyItems="center"
 					alignContent="center"
-					px="2"
 					mt="6"
 				>
-					<TechCard />
-					<TechCard />
-					<TechCard />
-					<TechCard />
-					<TechCard />
-					<TechCard />
-					<TechCard />
+					<TechCard title="React" color="#10AEFB" icon={ReactIcon} />
+					<TechCard title="React" color="#10AEFB" icon={ReactIcon} />
+					<TechCard title="React" color="#10AEFB" icon={ReactIcon} />
+					<TechCard title="React" color="#10AEFB" icon={ReactIcon} />
+					<TechCard title="React" color="#10AEFB" icon={ReactIcon} />
+					<TechCard title="React" color="#10AEFB" icon={ReactIcon} />
+					<TechCard title="React" color="#10AEFB" icon={ReactIcon} />
 				</Grid>
 			</Flex>
 		</Box>

@@ -11,6 +11,7 @@ export function FirstSection() {
 			bg="gray.800"
 			bgImage={WavesPng}
 			bgPosition="bottom"
+			bgSize="contain"
 			bgRepeat="no-repeat"
 		>
 			<Flex
@@ -35,12 +36,12 @@ export function FirstSection() {
 					</Text>
 				</Flex>
 
-				<Flex height="100%" alignItems="flex-end">
+				{/* <Flex height="100%" alignItems="flex-end">
 					<Flex flexDir="column" alignItems="center" mb="-12">
 						<Text mb="2">Scroll</Text>
 						<Box w="1px" h={250} bgColor="gray.200" />
 					</Flex>
-				</Flex>
+				</Flex> */}
 			</Flex>
 		</Box>
 	)
