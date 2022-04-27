@@ -11,7 +11,7 @@ export function Header() {
         alignItems="center"
         justify="space-between"
         px="10"
-        py="4"
+        py="10"
       >
         <Flex alignItems="center">
           <Avatar mr="2" name="Gustavo Gava" />
