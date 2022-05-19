@@ -2,6 +2,7 @@ import { Flex, Icon, Box, Text, FlexProps } from "@chakra-ui/react"
 import { ReactElement } from "react"
 import { FaReact } from "react-icons/fa"
 import ReactLogo from "../../assets/svg/reactjs-icon.svg?component"
+import { NormalText } from "../Text/NormalText"
 
 interface TechCardProps extends FlexProps {
 	title: string
@@ -35,7 +36,7 @@ export function TechCard({ title, color, icon: Icon, children, ...rest }: TechCa
 				{title}
 			</Text>
 
-			<Text>{children}</Text>
+			<NormalText>{children}</NormalText>
 		</Flex>
 	)
 }

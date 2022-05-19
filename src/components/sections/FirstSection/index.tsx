@@ -2,6 +2,8 @@ import { Box, Flex, Text } from "@chakra-ui/react"
 
 import WavesPng from "../../../assets/png/waves.png"
 import { HighlightedText } from "../../HighlightedText"
+import { NormalText } from "../../Text/NormalText"
+import { Title } from "../../Text/Title"
 
 export function FirstSection() {
 	return (
@@ -24,16 +26,16 @@ export function FirstSection() {
 				alignItems="center"
 			>
 				<Flex flexDir="column" maxW={800}>
-					<Text fontSize="2xl" fontFamily="Roboto">
+					<Text fontSize={["md", "2xl"]} fontFamily="Roboto">
 						HI THERE 👋, I'M
 					</Text>
-					<Text fontSize="7xl" fontFamily="body">
+					<Title fontSize={["2xl", "7xl"]} fontFamily="body">
 						Gustavo Gava
-					</Text>
-					<Text fontSize="2xl" fontFamily="body">
+					</Title>
+					<NormalText fontSize={["md", "2xl"]} fontFamily="body">
 						I'm a <HighlightedText>Front-end developer</HighlightedText>, having professional
 						experience in development with React and React Native
-					</Text>
+					</NormalText>
 				</Flex>
 
 				{/* <Flex height="100%" alignItems="flex-end">

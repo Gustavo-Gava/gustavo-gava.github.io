@@ -7,6 +7,7 @@ import TypescriptIcon from "../../../assets/svg/typescript-icon.svg?component"
 import ReactIcon from "../../../assets/svg/reactjs-icon.svg?component"
 import NextIcon from "../../../assets/svg/nextjs-icon.svg?component"
 import NodeIcon from "../../../assets/svg/nodejs-icon.svg?component"
+import { Title } from "../../Text/Title"
 
 export function SecondSection() {
 	return (
@@ -20,9 +21,9 @@ export function SecondSection() {
 				align="space"
 				justifyContent="center"
 			>
-				<Text as="h2" textAlign="center" fontSize="2xl">
+				<Title textAlign="center" fontSize="3xl">
 					Tecnologias
-				</Text>
+				</Title>
 
 				<Grid
 					templateColumns={["1fr", "1fr 1fr", "1fr 1fr 1fr"]}
