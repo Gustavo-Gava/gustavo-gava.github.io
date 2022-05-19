@@ -7,9 +7,10 @@ interface TechCardProps extends FlexProps {
 	title: string
 	color: string
 	icon: React.FC<React.SVGProps<SVGSVGElement>>
+	children: string
 }
 
-export function TechCard({ title, color, icon, ...rest }: TechCardProps) {
+export function TechCard({ title, color, icon: Icon, children, ...rest }: TechCardProps) {
 	console.log(color)
 
 	return (
@@ -19,7 +20,7 @@ export function TechCard({ title, color, icon, ...rest }: TechCardProps) {
 			flexDir="column"
 			alignItems="flex-start"
 			bgColor="gray.800"
-			borderBottomWidth={8}
+			borderBottomWidth={10}
 			borderBottomColor={color}
 			borderBottomStyle="solid"
 			borderRadius="8"
@@ -27,14 +28,14 @@ export function TechCard({ title, color, icon, ...rest }: TechCardProps) {
 			{...rest}
 		>
 			<Box borderRadius="full" p="4" mb="4" backgroundColor={`${color}CC`}>
-				<ReactLogo width={34} height={34} />
+				<Icon width={34} height={34} />
 			</Box>
 
-			<Text as="h2" fontSize="1xl">
+			<Text as="h2" fontSize="1xl" fontWeight="bold">
 				{title}
 			</Text>
 
-			<Text>I have been working with React for 2 years on a variety of different projects.</Text>
+			<Text>{children}</Text>
 		</Flex>
 	)
 }
