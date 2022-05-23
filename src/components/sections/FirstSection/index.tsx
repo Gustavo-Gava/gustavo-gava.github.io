@@ -15,6 +15,7 @@ export function FirstSection() {
 			bgPosition="bottom"
 			bgSize="contain"
 			bgRepeat="no-repeat"
+			id="home"
 		>
 			<Flex
 				w="100%"
@@ -24,17 +25,18 @@ export function FirstSection() {
 				px="10"
 				justify="space-between"
 				alignItems="center"
+				id="first-section"
 			>
 				<Flex flexDir="column" maxW={800}>
 					<Text fontSize={["md", "2xl"]} fontFamily="Roboto">
-						HI THERE 👋, I'M
+						OLÁ 👋, EU SOU
 					</Text>
 					<Title fontSize={["2xl", "7xl"]} fontFamily="body">
 						Gustavo Gava
 					</Title>
 					<NormalText fontSize={["md", "2xl"]} fontFamily="body">
-						I'm a <HighlightedText>Front-end developer</HighlightedText>, having professional
-						experience in development with React and React Native
+						Sou um <HighlightedText>Desenvolvedor Front-end</HighlightedText>, tendo experiência
+						profissional no desenvolvimento de aplicativos e sites com React e React Native.
 					</NormalText>
 				</Flex>
 

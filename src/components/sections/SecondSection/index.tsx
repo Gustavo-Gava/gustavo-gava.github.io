@@ -21,7 +21,10 @@ export function SecondSection() {
 				align="space"
 				justifyContent="center"
 			>
-				<Title textAlign="center" fontSize="3xl">
+				<Title textAlign="center" fontSize="2xl" fontFamily="Roboto Mono" id="techs">
+					<Text display="inline" fontSize="xl" color="highlighted.400">
+						01.
+					</Text>{" "}
 					Tecnologias
 				</Title>
 
@@ -36,26 +39,30 @@ export function SecondSection() {
 					m="auto"
 				>
 					<TechCard title="HTML" color="#e2502f" icon={HTMLIcon}>
-						I have been working with HTML for 2 years, having experience with HTML semantic and
-						derivatives.
+						Tenho contato com HTML há 2 anos através de estudo e prática profissional, tendo
+						experiência com HTML semântico e boas práticas.
 					</TechCard>
 					<TechCard title="CSS" color="#10AEFB" icon={CSSIcon}>
-						I have beem working and studying CSS for 2 years, having experience with post-processors
-						like SASS and libs like Styled Components.
+						Tenho contato com CSS há 2 anos atráves de estudo e prática profissional, já tive
+						experiência com pré-processadores como SASS, Styled Componentes e libs como Chakra UI e
+						TailwindCSS.
 					</TechCard>
 					<TechCard title="Typescript" color="#10AEFB" icon={TypescriptIcon}>
-						Studying and working with typescript for 1 year, since I started study React.
+						Trabalho com Typescript desde quando tive o meu primeiro contato com React, e acredito
+						que seja uma tecnologia indispensável para todo tipo de projeto.
 					</TechCard>
 					<TechCard title="React" color="#17d8fc" icon={ReactIcon}>
-						I have been working and studying with React for 1 year, having experience with hooks,
-						tests, performance. I have built sites professionally with React and Nextjs.
+						Tive o meu primeiro contato na trilha do Ignite, e desde então venho estudando e
+						trabalhando com React, tendo experiência com testes unitários, boas práticas e
+						performance.
 					</TechCard>
 					<TechCard title="React Native" color="#17d8fc" icon={ReactIcon}>
-						Working with React Native on real projects, I was responsible for projects since ambient
-						configuration to deploy to stores.
+						Tive contato com React Native devido uma demanda profissional, então pude absorver muito
+						conhecimento e experiência nessa Tecnologia, tendo em vista que já tinha uma experiência
+						com React.
 					</TechCard>
 					<TechCard title="Node" color="#7cea6f" icon={NodeIcon}>
-						I worked with nodejs and nestjs implemeting features on API's
+						Trabalhei com Nodejs implementando features em um projeto profissional.
 					</TechCard>
 				</Grid>
 			</Flex>

@@ -1,7 +1,8 @@
 import { TextProps, Text } from "@chakra-ui/react"
+import { ReactNode } from "react"
 
 interface TitleProps extends TextProps {
-	children: string
+	children: ReactNode
 }
 
 export function Title({ children, ...rest }: TitleProps) {
