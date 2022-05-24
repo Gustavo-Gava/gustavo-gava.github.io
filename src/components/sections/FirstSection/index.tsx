@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
+import { Slide } from "react-awesome-reveal"
 
 import WavesPng from "../../../assets/png/waves.png"
 import { HighlightedText } from "../../HighlightedText"
@@ -26,6 +27,8 @@ export function FirstSection() {
 				justify="space-between"
 				alignItems="center"
 				id="first-section"
+				as={Slide}
+				delay={600}
 			>
 				<Flex flexDir="column" maxW={800}>
 					<Text fontSize={["md", "2xl"]} fontFamily="Roboto">

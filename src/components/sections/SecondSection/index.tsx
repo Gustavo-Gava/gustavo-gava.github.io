@@ -8,6 +8,7 @@ import ReactIcon from "../../../assets/svg/reactjs-icon.svg?component"
 import NextIcon from "../../../assets/svg/nextjs-icon.svg?component"
 import NodeIcon from "../../../assets/svg/nodejs-icon.svg?component"
 import { Title } from "../../Text/Title"
+import { motion } from "framer-motion"
 
 export function SecondSection() {
 	return (
@@ -42,11 +43,13 @@ export function SecondSection() {
 						Tenho contato com HTML há 2 anos através de estudo e prática profissional, tendo
 						experiência com HTML semântico e boas práticas.
 					</TechCard>
+
 					<TechCard title="CSS" color="#10AEFB" icon={CSSIcon}>
 						Tenho contato com CSS há 2 anos atráves de estudo e prática profissional, já tive
 						experiência com pré-processadores como SASS, Styled Componentes e libs como Chakra UI e
 						TailwindCSS.
 					</TechCard>
+
 					<TechCard title="Typescript" color="#10AEFB" icon={TypescriptIcon}>
 						Trabalho com Typescript desde quando tive o meu primeiro contato com React, e acredito
 						que seja uma tecnologia indispensável para todo tipo de projeto.

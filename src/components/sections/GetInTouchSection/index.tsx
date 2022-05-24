@@ -1,9 +1,10 @@
-import { Box, Flex, Button, Text } from "@chakra-ui/react"
+import { Box, Flex, Button, Text, Link } from "@chakra-ui/react"
+import { Fade } from "react-awesome-reveal"
 import { Title } from "../../Text/Title"
 
 export function GetInTouchSection() {
 	return (
-		<Box as="footer">
+		<Box as={Fade}>
 			<Flex maxW={1200} h="100%" py="10" px="4" flexDir="column" mx="auto">
 				<Title textAlign="center" fontSize="2xl" fontFamily="Roboto Mono" color="highlighted.400">
 					<Text display="inline" fontSize="xl">
@@ -22,9 +23,11 @@ export function GetInTouchSection() {
 						abaixo.
 					</Text>
 
-					<Button colorScheme="linkedin" variant="outline" p="8">
-						Say hello!
-					</Button>
+					<Link href="mailto:gustavogava123@hotmail.com">
+						<Button colorScheme="linkedin" variant="outline" p="8">
+							Say hello!
+						</Button>
+					</Link>
 				</Box>
 			</Flex>
 		</Box>

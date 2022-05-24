@@ -1,4 +1,5 @@
 import { Box, Divider, Flex, Link, ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import { Slide } from "react-awesome-reveal"
 import ChevronLeft from "../../../assets/svg/chevron-left.svg"
 import { ProjectCard } from "../../ProjectCard"
 import { HighlightedText } from "../../Text/HighlightedText"
@@ -10,49 +11,51 @@ export function ThirdSection() {
 	return (
 		<Box minH="calc(100vh)">
 			<Flex maxW={1200} h="100%" py="10" px="4" flexDir="column" mx="auto">
-				<Text as="h2" fontSize="2xl" mx="auto" fontFamily="Roboto Mono">
-					<HighlightedText display="inline" fontSize="xl" color="highlighted.400" id="experience">
-						02.{" "}
-					</HighlightedText>
-					Experiência
-				</Text>
-
-				<Flex flexDir="column" p="4" mx="auto">
-					<Text fontSize="2xl">
-						Arkos Digital <HighlightedText as="span">@Desenvolvedor Fullstack</HighlightedText>
-					</Text>
-					<Text fontSize="smaller" color="gray.200">
-						Setembro 2021 - Junho 2022
+				<Flex as={Slide} flexDir="column" mx="auto">
+					<Text as="h2" fontSize="2xl" mx="auto" fontFamily="Roboto Mono">
+						<HighlightedText display="inline" fontSize="xl" color="highlighted.400" id="experience">
+							02.{" "}
+						</HighlightedText>
+						Experiência
 					</Text>
 
-					<UnorderedList
-						maxW={600}
-						color="gray.200"
-						letterSpacing="wider"
-						textAlign="justify"
-						display="flex"
-						flexDir="column"
-						gap="4"
-						style={{ listStyleImage: `url(${ChevronLeft})` }}
-					>
-						<ListItem mt="4">
-							Desenvolvimento de aplicativos mobile com React Native, sendo responsável desde a
-							configuração do ambiente de desenvolvimento, até a postagem do aplicativo para as
-							stores
-						</ListItem>
-						<ListItem>
-							Desenvolvimento de sites com React e Next.js, sendo responsável pela criação e deploy
-							de websites.
-						</ListItem>
-						<ListItem>
-							Desenvolvimento do backend com Node.js e Nest.js, sendo responsável pela criação e
-							implementação de features.
-						</ListItem>
-						<ListItem>
-							Comunicação e explicação de features do projeto diretamente com o cliente e
-							internamente.
-						</ListItem>
-					</UnorderedList>
+					<Flex flexDir="column" p="4" mx="auto">
+						<Text fontSize="2xl">
+							Arkos Digital <HighlightedText as="span">@Desenvolvedor Fullstack</HighlightedText>
+						</Text>
+						<Text fontSize="smaller" color="gray.200">
+							Setembro 2021 - Junho 2022
+						</Text>
+
+						<UnorderedList
+							maxW={600}
+							color="gray.200"
+							letterSpacing="wider"
+							textAlign="justify"
+							display="flex"
+							flexDir="column"
+							gap="4"
+							style={{ listStyleImage: `url(${ChevronLeft})` }}
+						>
+							<ListItem mt="4">
+								Desenvolvimento de aplicativos mobile com React Native, sendo responsável desde a
+								configuração do ambiente de desenvolvimento, até a postagem do aplicativo para as
+								stores
+							</ListItem>
+							<ListItem>
+								Desenvolvimento de sites com React e Next.js, sendo responsável pela criação e
+								deploy de websites.
+							</ListItem>
+							<ListItem>
+								Desenvolvimento do backend com Node.js e Nest.js, sendo responsável pela criação e
+								implementação de features.
+							</ListItem>
+							<ListItem>
+								Comunicação e explicação de features do projeto diretamente com o cliente e
+								internamente.
+							</ListItem>
+						</UnorderedList>
+					</Flex>
 				</Flex>
 
 				<Title mx="auto" fontSize="2xl" my="4" mt="32" id="projects">
@@ -68,6 +71,7 @@ export function ThirdSection() {
 						title="Amigo Blue"
 						type="Projeto Profissional"
 						techs={["React", "React Native", "Typescript", "StyledComponents", "Nextjs", "Nodejs"]}
+						projectLink="https://play.google.com/store/search?q=Amigo%20Blue&c=apps"
 						imageLeftSide
 					>
 						<NormalText>
@@ -81,6 +85,7 @@ export function ThirdSection() {
 						title="Dashgo"
 						type="Projeto Pessoal"
 						techs={["React", "Typescript", "Nextjs", "Chakra UI", "React Query"]}
+						projectLink="https://github.com/Gustavo-Gava/dashgo"
 					>
 						<NormalText>
 							Dashgo é página de administração para sua aplicação, te possibilitando visualizar
@@ -95,6 +100,7 @@ export function ThirdSection() {
 						title="ig.news"
 						type="Projeto Pessoal"
 						techs={["React", "Typescript", "Nextjs", "Stripe", "FaunaDB"]}
+						projectLink="https://github.com/Gustavo-Gava/ig.news"
 						imageLeftSide
 					>
 						<NormalText>
@@ -105,9 +111,10 @@ export function ThirdSection() {
 					</ProjectCard>
 
 					<ProjectCard
-						backgroundImageUrl="https://user-images.githubusercontent.com/77810817/165830868-33f24fd7-ce84-41a9-bd27-872cec13a397.png"
+						backgroundImageUrl="https://programadoresbrasil.com.br/wp-content/uploads/2020/04/GitHub-logo-2-imagen.jpg"
 						title="Github"
 						type="Projeto Pessoal"
+						projectLink="https://github.com/Gustavo-Gava"
 						techs={[
 							"React",
 							"React Native",

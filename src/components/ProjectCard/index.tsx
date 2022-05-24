@@ -1,5 +1,6 @@
-import { Box, Flex, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Flex, Link, useBreakpointValue } from "@chakra-ui/react"
 import { ReactNode } from "react"
+import { Fade, Slide } from "react-awesome-reveal"
 import { HighlightedText } from "../Text/HighlightedText"
 
 import { TechText } from "../Text/TechText"
@@ -11,6 +12,7 @@ interface ProjectCardProps {
 	title: string
 	techs: string[]
 	imageLeftSide?: boolean
+	projectLink?: string
 	type: "Projeto Pessoal" | "Projeto Profissional"
 }
 
@@ -19,6 +21,7 @@ export function ProjectCard({
 	title,
 	techs,
 	imageLeftSide = false,
+	projectLink = "#",
 	type,
 	children,
 }: ProjectCardProps) {
@@ -44,9 +47,11 @@ export function ProjectCard({
 					Projeto Pessoal
 				</HighlightedText>
 
-				<Title mb="2" fontSize="2xl">
-					{title}
-				</Title>
+				<Link href={projectLink} target="_blank" textDecoration="underline">
+					<Title mb="2" fontSize="2xl">
+						{title}
+					</Title>
+				</Link>
 
 				{children}
 
@@ -60,23 +65,25 @@ export function ProjectCard({
 	}
 
 	return (
-		<Flex my="8">
+		<Flex my="8" as={Fade} delay={300}>
 			{imageLeftSide ? (
 				<>
-					<Box
-						w={800}
-						h={390}
-						borderRadius="base"
-						bgSize="cover"
-						style={{
-							backgroundImage: `url(${backgroundImageUrl})`,
-						}}
-						_hover={{
-							backgroundImage: `linear-gradient(rgba(50, 138, 194, 0.0), rgba(50, 138, 194, 0.0)), url(${backgroundImageUrl})`,
-							cursor: "pointer",
-							transitionDuration: 0.2,
-						}}
-					/>
+					<Link href={projectLink} target="_blank">
+						<Box
+							w={800}
+							h={390}
+							borderRadius="base"
+							bgSize="cover"
+							style={{
+								backgroundImage: `url(${backgroundImageUrl})`,
+							}}
+							_hover={{
+								backgroundImage: `linear-gradient(rgba(50, 138, 194, 0.0), rgba(50, 138, 194, 0.0)), url(${backgroundImageUrl})`,
+								cursor: "pointer",
+								transitionDuration: 0.2,
+							}}
+						/>
+					</Link>
 
 					<Flex flexDir="column" justify="center" textAlign="right" maxW={500}>
 						<HighlightedText fontFamily="Roboto Mono" fontStyle="italic" fontSize="small">
@@ -120,20 +127,22 @@ export function ProjectCard({
 						</Flex>
 					</Flex>
 
-					<Box
-						w={800}
-						h={390}
-						borderRadius="base"
-						bgSize="cover"
-						style={{
-							backgroundImage: `linear-gradient(rgba(50, 139, 194, 0.0), rgba(50, 139, 194, 0.3)), url(${backgroundImageUrl})`,
-						}}
-						_hover={{
-							backgroundImage: `linear-gradient(rgba(50, 138, 194, 0.0), rgba(50, 138, 194, 0.0)), url(${backgroundImageUrl})`,
-							cursor: "pointer",
-							transitionDuration: 0.2,
-						}}
-					/>
+					<Link href={projectLink} target="_blank">
+						<Box
+							w={800}
+							h={390}
+							borderRadius="base"
+							bgSize="cover"
+							style={{
+								backgroundImage: `linear-gradient(rgba(50, 139, 194, 0.1), rgba(50, 139, 194, 0.1)), url(${backgroundImageUrl})`,
+							}}
+							_hover={{
+								backgroundImage: `linear-gradient(rgba(50, 138, 194, 0.0), rgba(50, 138, 194, 0.0)), url(${backgroundImageUrl})`,
+								cursor: "pointer",
+								transitionDuration: 0.2,
+							}}
+						/>
+					</Link>
 				</>
 			)}
 		</Flex>
