@@ -1,5 +1,5 @@
 import { Stack } from "@chakra-ui/react"
-import { FaHome, FaTools, FaWallet } from "react-icons/fa"
+import { FaHome, FaProjectDiagram, FaTools, FaWallet } from "react-icons/fa"
 import { NavLink } from "./NavLink"
 
 export function SidebarNav() {
@@ -8,13 +8,13 @@ export function SidebarNav() {
 			<NavLink icon={FaHome} href="#home">
 				Home
 			</NavLink>
-			<NavLink icon={FaTools} href="#first-section">
+			<NavLink icon={FaTools} href="#techs">
 				Tecnologias
 			</NavLink>
-			<NavLink icon={FaWallet} href="#home">
+			<NavLink icon={FaWallet} href="#experience">
 				Experiências
 			</NavLink>
-			<NavLink icon={FaWallet} href="#home">
+			<NavLink icon={FaProjectDiagram} href="#projects">
 				Projects
 			</NavLink>
 		</Stack>
