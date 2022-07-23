@@ -10,6 +10,7 @@ import {
 	Text,
 	useBreakpointValue,
 } from "@chakra-ui/react"
+import { useEffect, useState } from "react"
 import { Slide } from "react-awesome-reveal"
 import { FaBars } from "react-icons/fa"
 import { useSidebarDrawer } from "../../contexts/SidebarDrawerContext"
@@ -17,10 +18,48 @@ import { useSidebarDrawer } from "../../contexts/SidebarDrawerContext"
 export function Header() {
 	const { isOpen, onClose, onOpen } = useSidebarDrawer()
 
+	const [headerHeight, setHeaderHeight] = useState(70)
+	const [isScrollingDown, setIsScrollingDown] = useState(false)
+	const [scrollY, setScrollY] = useState(0)
+
 	const isDrawerSidebar = useBreakpointValue({
 		base: true,
 		lg: false,
 	})
+
+	useEffect(() => {
+		const threshold = 0
+		let lastScrollY = window.pageYOffset
+		let ticking = false
+
+		const updateScrollDir = () => {
+			const scrollY = window.pageYOffset
+
+			setScrollY(scrollY)
+
+			if (Math.abs(scrollY - lastScrollY) < threshold) {
+				ticking = false
+				return
+			}
+
+			setIsScrollingDown(scrollY > lastScrollY)
+			lastScrollY = scrollY > 0 ? scrollY : 0
+			ticking = false
+		}
+
+		const onScroll = () => {
+			if (!ticking) {
+				window.requestAnimationFrame(updateScrollDir)
+				ticking = true
+			}
+		}
+
+		window.addEventListener("scroll", onScroll)
+
+		return () => window.removeEventListener("scroll", onScroll)
+	}, [isScrollingDown])
+
+	useEffect(() => {}, [])
 
 	if (isDrawerSidebar)
 		return (
@@ -53,10 +92,13 @@ export function Header() {
 	return (
 		<Box
 			w="full"
+			maxH={isScrollingDown ? 0 : 60}
+			transition="all 0.6s"
+			overflow="hidden"
 			position="fixed"
 			top="0"
 			zIndex={2}
-			bg="#1F2029AA"
+			bg={scrollY ? "#1F2029" : "transparent"}
 			as={Slide}
 			direction="down"
 			fontFamily="Roboto Mono"
@@ -65,12 +107,12 @@ export function Header() {
 			<Flex
 				as="header"
 				maxW={1440}
-				h={70}
+				h={62}
 				mx="auto"
 				alignItems="center"
 				justify="space-between"
 				px="10"
-				py="10"
+				py="6"
 			>
 				<Flex alignItems="center">
 					<Avatar
