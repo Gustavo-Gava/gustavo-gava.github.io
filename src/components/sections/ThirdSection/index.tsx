@@ -6,6 +6,32 @@ import { HighlightedText } from "../../Text/HighlightedText"
 import { NormalText } from "../../Text/NormalText"
 import { TechText } from "../../Text/TechText"
 import { Title } from "../../Text/Title"
+import { WorkExperience } from "../../WorkExperience"
+
+const workExperiences = [
+	{
+		enterprise: "Codeby",
+		role: "@Desenvolvedor Frontend",
+		startDate: "Junho 2022",
+		functionsList: [
+			"Desenvolvimento de ECommerces com VTEX e Nextjs, sendo responsável pelo desenvolvimento a partir do design de um Figma, sendo totalmente fiel a ele.",
+			"Suporte de projetos desenvolvidos, sendo responsável pela comunicação específicas de tasks com clientes brasileiros e europeus, onde o cliente descreve a task, faço a estimativa, e se estiver alinhado, prossigo com a task.",
+			"Iniciativa para melhorar o fluxo de PRs e commits no GitHub."
+		]
+	},
+	{
+		enterprise: "Arkos Digital",
+		role: "@Desenvolvedor Fullstack",
+		startDate: "Setembro 2021",
+		endDate: "Junho 2022",
+		functionsList: [
+			"Desenvolvimento de aplicativos mobile com React Native, sendo responsável desde a configuração do ambiente de desenvolvimento, até a postagem do aplicativo para as stores",
+			"Desenvolvimento de sites com React e Next.js, sendo responsável pela criação e deploy de websites.",
+			"Desenvolvimento do backend com Node.js e Nest.js, sendo responsável pela criação e implementação de features.",
+			"Comunicação e explicação de features do projeto diretamente com o cliente e internamente."
+		]
+	}
+]
 
 export function ThirdSection() {
 	return (
@@ -19,43 +45,10 @@ export function ThirdSection() {
 						Experiência
 					</Text>
 
-					<Flex flexDir="column" p="4" mx="auto">
-						<Text fontSize="2xl">
-							Arkos Digital <HighlightedText as="span">@Desenvolvedor Fullstack</HighlightedText>
-						</Text>
-						<Text fontSize="smaller" color="gray.200">
-							Setembro 2021 - Junho 2022
-						</Text>
+					{workExperiences.map(item => (
+						<WorkExperience data={item}/>
+					))}
 
-						<UnorderedList
-							maxW={600}
-							color="gray.200"
-							letterSpacing="wider"
-							textAlign="justify"
-							display="flex"
-							flexDir="column"
-							gap="4"
-							style={{ listStyleImage: `url(${ChevronLeft})` }}
-						>
-							<ListItem mt="4">
-								Desenvolvimento de aplicativos mobile com React Native, sendo responsável desde a
-								configuração do ambiente de desenvolvimento, até a postagem do aplicativo para as
-								stores
-							</ListItem>
-							<ListItem>
-								Desenvolvimento de sites com React e Next.js, sendo responsável pela criação e
-								deploy de websites.
-							</ListItem>
-							<ListItem>
-								Desenvolvimento do backend com Node.js e Nest.js, sendo responsável pela criação e
-								implementação de features.
-							</ListItem>
-							<ListItem>
-								Comunicação e explicação de features do projeto diretamente com o cliente e
-								internamente.
-							</ListItem>
-						</UnorderedList>
-					</Flex>
 				</Flex>
 
 				<Title mx="auto" fontSize="2xl" my="4" mt="32" id="projects">
