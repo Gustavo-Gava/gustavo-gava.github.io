@@ -16,8 +16,8 @@ const workExperiences = [
 		functionsList: [
 			"Desenvolvimento de ECommerces com VTEX e Nextjs, sendo responsável pelo desenvolvimento a partir do design de um Figma, sendo totalmente fiel a ele.",
 			"Suporte de projetos desenvolvidos, sendo responsável pela comunicação específicas de tasks com clientes brasileiros e europeus, onde o cliente descreve a task, faço a estimativa, e se estiver alinhado, prossigo com a task.",
-			"Iniciativa para melhorar o fluxo de PRs e commits no GitHub."
-		]
+			"Iniciativa para melhorar o fluxo de PRs e commits no GitHub.",
+		],
 	},
 	{
 		enterprise: "Arkos Digital",
@@ -28,9 +28,9 @@ const workExperiences = [
 			"Desenvolvimento de aplicativos mobile com React Native, sendo responsável desde a configuração do ambiente de desenvolvimento, até a postagem do aplicativo para as stores",
 			"Desenvolvimento de sites com React e Next.js, sendo responsável pela criação e deploy de websites.",
 			"Desenvolvimento do backend com Node.js e Nest.js, sendo responsável pela criação e implementação de features.",
-			"Comunicação e explicação de features do projeto diretamente com o cliente e internamente."
-		]
-	}
+			"Comunicação e explicação de features do projeto diretamente com o cliente e internamente.",
+		],
+	},
 ]
 
 export function ThirdSection() {
@@ -45,10 +45,9 @@ export function ThirdSection() {
 						Experiência
 					</Text>
 
-					{workExperiences.map(item => (
-						<WorkExperience data={item}/>
+					{workExperiences.map((item) => (
+						<WorkExperience data={item} />
 					))}
-
 				</Flex>
 
 				<Title mx="auto" fontSize="2xl" my="4" mt="32" id="projects">
@@ -59,6 +58,20 @@ export function ThirdSection() {
 				</Title>
 
 				<Flex gap="4" flexDir="column">
+					<ProjectCard
+						backgroundImageUrl="https://admintresc.vteximg.com.br/arquivos/ids/542397/01025_MERCAFE_%20Banners%20Novo%20Menu_TRES_MOBILE.jpg?v=637889192453400000"
+						title="Mercafé"
+						type="Projeto Profissional"
+						techs={["React", "Typescript", "StyledComponents", "Nextjs", "VTEX", "GraphQL"]}
+						projectLink="https://mercafe.com.br/"
+						imageLeftSide={false}
+					>
+						<NormalText>
+							E-commerce de cafés e produtos envolvidos no mundo do café. Fui responsável desde o
+							começo do desenvolvimento até o deploy, juntamente à equipe.
+						</NormalText>
+					</ProjectCard>
+
 					<ProjectCard
 						backgroundImageUrl="https://user-images.githubusercontent.com/77810817/169858134-d7e74739-a32f-4e19-a001-45ccdb0d0434.png"
 						title="Amigo Blue"

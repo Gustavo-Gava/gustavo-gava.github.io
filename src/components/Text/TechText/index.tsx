@@ -17,7 +17,7 @@ export function TechText({ children, ...rest }: TechTextProps) {
 			bgColor="#328BC2"
 			transitionDuration="0.3s"
 			_hover={{
-				cursor: "pointer",
+				cursor: "default",
 				bgColor: "#328BC2AA",
 			}}
 			{...rest}

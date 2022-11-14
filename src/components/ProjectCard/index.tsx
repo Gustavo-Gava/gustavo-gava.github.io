@@ -109,7 +109,7 @@ export function ProjectCard({
 				<>
 					<Flex flexDir="column" justify="center" maxW={500}>
 						<HighlightedText fontFamily="Roboto Mono" fontStyle="italic" fontSize="small">
-							Projeto Pessoal
+							{type}
 						</HighlightedText>
 
 						<Title mb="2" fontSize="2xl">
